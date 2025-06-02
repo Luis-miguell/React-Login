@@ -1,12 +1,14 @@
 import { useState } from "react";
 import "./formulario.css";
 
-function Formulario({modo, setDatos, setRender}){
+function Formulario({modo, setDatos, setRender,  datos}){
 
     const changes = (e) => {
         setRender(false);
         const elemento = e.target
-        setDatos( dates => ({...dates, [elemento.name]: elemento.value}) )
+        setDatos( datos =>
+            ({...datos, [elemento.name]: elemento.value.trim() ? elemento.value : "" })
+         )
     }
 
     const enviarD = (e) => {
@@ -20,7 +22,7 @@ function Formulario({modo, setDatos, setRender}){
 
             <h1>Login Básico</h1>
         
-            <form onSubmit={enviarD} className={modo && "jaja"}>
+            <form onSubmit={enviarD}>
 
                 <label htmlFor="nombre">Nombre: </label>
                 <input 
@@ -29,6 +31,7 @@ function Formulario({modo, setDatos, setRender}){
                 id="nombre"
                 required
                 onChange={changes}
+                value={datos.nombre}
                 />
 
                 <label htmlFor="apellido">Apellido: </label>
@@ -38,6 +41,7 @@ function Formulario({modo, setDatos, setRender}){
                 id="apellido"
                 required
                 onChange={changes}
+                value={datos.apellido}
                 />
 
                 <label htmlFor="correo">Correo: </label>
@@ -47,6 +51,7 @@ function Formulario({modo, setDatos, setRender}){
                 id="correo"
                 required
                 onChange={changes}
+                value={datos.correo}
                 />
 
                 <label htmlFor="pass">Contraseña: </label>
@@ -56,6 +61,7 @@ function Formulario({modo, setDatos, setRender}){
                 id="pass"
                 required
                 onChange={changes}
+                value={datos.pass}
                 />
 
                 <label htmlFor="gen">Género: </label>
@@ -64,8 +70,9 @@ function Formulario({modo, setDatos, setRender}){
                 id="gen"
                 onChange={changes}
                 required
+                value={datos.gen}
                 >
-                    <option value="0" selected disabled style={{display: "none"}}>Elige</option>
+                    <option value="" selected disabled style={{display: "none"}}>Elige</option>
                     <option value="Hombre">Hombre</option>
                     <option value="Mujer">Mujer</option>
                     <option value="Tralalero Tralala">Tralalero Tralala</option>

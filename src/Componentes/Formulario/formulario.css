@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 25px;
     width: 400px;
     border-radius: 20px;
     padding: 10px 20px;
@@ -27,7 +27,7 @@ h1{
 }
 
 .divForm form input, .divForm form select{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding: 7px;
     border-radius: 8px;
     border: 1px solid rgb(255, 255, 255, 0.2);
@@ -47,8 +47,12 @@ option{
 
 .divForm input:-webkit-autofill {
   background-color: transparent !important;
-  -webkit-text-fill-color: white !important; 
+  -webkit-text-fill-color: rgb(255, 255, 255) !important; 
   transition: background-color 9999s ease-in-out 0s;
+}
+
+.divForm input:-webkit-autofill:focus{
+    -webkit-text-fill-color: white;
 }
 
 .divForm form input:focus, .divForm form select:focus{

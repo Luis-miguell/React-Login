@@ -27,7 +27,7 @@ function App() {
     return(
         <>
         <div className='elTodo'>
-            <Formulario setDatos={setDatos} modo={modo} setRender={setRender}/>
+            <Formulario datos={datos} setDatos={setDatos} setRender={setRender}/>
             {render && <Render datos={datos} setRender={setRender} />}
         </div>
         <Toggle modo={modo} setModo={setModo}/>
