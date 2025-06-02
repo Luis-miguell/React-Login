@@ -1,7 +1,6 @@
-import { useState } from "react";
 import "./formulario.css";
 
-function Formulario({modo, setDatos, setRender,  datos}){
+function Formulario({setDatos, setRender,  datos}){
 
     const changes = (e) => {
         setRender(false);
