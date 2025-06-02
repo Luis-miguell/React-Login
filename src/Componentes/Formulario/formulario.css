@@ -1,0 +1,63 @@
+.divForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 400px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid rgb(255, 255, 255, 0.4);
+}
+
+.divForm form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+h1{
+    color: white;
+}
+
+.divForm form label{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.divForm form input, .divForm form select{
+    margin-bottom: 15px;
+    padding: 7px;
+    border-radius: 8px;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    background-color: transparent;
+    backdrop-filter: blur(1000px);
+    color: white;
+}
+
+option{
+    background-color: rgb(255, 0, 0, 0.8);
+}
+
+.divForm form select, option, input{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.divForm input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-text-fill-color: white !important; 
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.divForm form input:focus, .divForm form select:focus{
+    outline: 2px solid yellow;
+}
+
+.divForm form button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: yellow;
+}

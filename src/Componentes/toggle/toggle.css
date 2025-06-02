@@ -1,0 +1,32 @@
+.toggleF{
+    width: 45px;
+    height: 24px;
+    border-radius: 20px;
+    background-color: yellow;
+    padding: 2px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+.toggleF div{
+    width: 20px;    
+    height: 20px;
+    border-radius: 50%;
+    background-color: cyan;
+    transition: all 0.3s ease;
+    position: relative;
+    left: 2px;
+}
+
+.oscuro{
+    background-color: black;
+}
+
+.oscuro div{
+    background-color: white;
+    transform: translateX(87%);
+}

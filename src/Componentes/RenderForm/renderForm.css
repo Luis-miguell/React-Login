@@ -1,0 +1,51 @@
+.divRender{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    width: 300px;
+    border: 1px solid rgb(255, 255, 255, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    overflow: hidden;
+    word-wrap: break-word;
+
+}
+
+.divRender div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.divRender p span{
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+.divRender p{
+    color: black;
+}
+
+.divRender p span{
+    color: white;
+}
+
+.divRender p:nth-of-type(3) span:hover{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.divRender button{
+    padding: 7px;
+    background-color: yellow;
+    border: none;
+    border-radius: 10px;
+}
+
+h2{
+    align-self: center;
+}
