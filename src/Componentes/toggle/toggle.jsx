@@ -1,11 +1,11 @@
-import { useState } from "react";
+import { useContext} from "react";
+import { elTodoContext } from "../contexto";
 import "./toggle.css"
-function Toggle({modo, setModo}){
+function Toggle(/* {modo, setModo} */){
 
-    const [mode, setMode] = useState(false);
+    const {modo, setModo} = useContext(elTodoContext);
 
     const changeMode = () => {
-        setMode(!mode)
         setModo(!modo)
     }
 
@@ -13,7 +13,7 @@ function Toggle({modo, setModo}){
 
         <>
         
-            <div className={`toggleF ${mode && "oscuro"}`} onClick={changeMode}>
+            <div className={`toggleF ${modo && "oscuro"}`} onClick={changeMode}>
                 <div>
                 </div>
             </div>

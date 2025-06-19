@@ -1,13 +1,17 @@
+import { useContext } from "react";
+import { elTodoContext } from "../contexto";
 import "./formulario.css";
 
-function Formulario({setDatos, setRender,  datos}){
+function Formulario(/* {setDatos, setRender,  datos} */){
+
+    const {setDatos, setRender, datos} = useContext(elTodoContext);
 
     const changes = (e) => {
         setRender(false);
         const elemento = e.target
         setDatos( datos =>
             ({...datos, [elemento.name]: elemento.value.trim() ? elemento.value : "" })
-         )
+        )
     }
 
     const enviarD = (e) => {
@@ -71,7 +75,7 @@ function Formulario({setDatos, setRender,  datos}){
                 required
                 value={datos.gen}
                 >
-                    <option value="" selected disabled style={{display: "none"}}>Elige</option>
+                    <option value="" defaultValue disabled style={{display: "none"}}>Elige</option>
                     <option value="Hombre">Hombre</option>
                     <option value="Mujer">Mujer</option>
                     <option value="Tralalero Tralala">Tralalero Tralala</option>

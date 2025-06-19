@@ -1,5 +1,9 @@
 import "./renderForm.css"
-function Render({datos, setRender}){
+import { elTodoContext } from "../contexto"
+import { useContext } from "react"
+function Render(){
+
+    const {datos, setRender} = useContext(elTodoContext)
 
     const ocultar = () => {
         setRender(false)
